@@ -32,7 +32,7 @@ function initMap() {
    marker.addListener("click", () => {
      infoWindow.setContent(label);
      infoWindow.open(map, marker);
-    });
+    };
     return marker;
   });
 
