@@ -3,8 +3,16 @@ function initMap() {
     zoom: 3,
     center: { lat: -28.024, lng: 140.887 },
   });
+  
+  const infoWindow = new google.maps.InfoWindow({
+    content: "",
+    disableAutoPan: true,
+  });
+  
   // Create an array of alphabetical characters used to label the markers.
   const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  
+  
   // Add some markers to the map.
   // Note: The code uses the JavaScript Array.prototype.map() method to
   // create an array of markers based on a given "locations" array.
@@ -15,6 +23,17 @@ function initMap() {
       label: labels[i % labels.length],
     });
   });
+  
+  
+   // markers can only be keyboard focusable when they have click listeners
+   // open info window when marker is clicked
+   marker.addListener("click", () => {
+     infoWindow.setContent(label);
+     infoWindow.open(map, marker);
+    });
+    return marker;
+  });
+
   // Add a marker clusterer to manage the markers.
   new MarkerClusterer(map, markers, {
     imagePath:
