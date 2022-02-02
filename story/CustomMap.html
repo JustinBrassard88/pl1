@@ -3,6 +3,8 @@
   <head>
     <title>OMHA Caledon Hawks Hockey</title>
 
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap&v=weekly" async></script>
     <script>
         function initMap() {
           const map = new google.maps.Map(document.getElementById("map"), {
@@ -134,10 +136,6 @@
     
     <h1 class="Title">OMHA Caledon Hawks Hockey</h1>
     <div id="map"></div>
-    <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap&v=weekly"
-    async>
-  </script>
 
     <p class="Generalinfo"> The locations shown above show the arena's within the Toronto region extending all the way to Owen Sound and St.Catherines. These are some of the various arenas that the OMHA (Ontario
         Minor Hockey Association) teams play in. There are teams in the OMHA spread throughout Ontario, but mainly Southern Ontario. The markers above indicate some fo the locations which I have 
