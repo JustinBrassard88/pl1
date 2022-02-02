@@ -55,12 +55,12 @@
             const Arena = Arenas;
 
             new google.maps.Marker({
-              position: { lat: Arena[1], lng: Arena[2] },
+              position: { lat: Arena[i][1], lng: Arena[i][2] },
               map,
               icon: Arena[i][4],
               shape: shape,
-              title: Arena[0],
-              Number: Arena[3],
+              title: Arena[i][0],
+              Number: Arena[i][3],
             });
           }
         }
