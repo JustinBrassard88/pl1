@@ -15,6 +15,7 @@
           setMarkers(map);
         }
         // Inspired from github folder for Complex Markers
+        //Creates 
         const Arenas = [
           ["Caledon East Arena", 43.874028, -79.860700, 1, "stadium.png" ],
           ["CAA Centre", 43.669281, -79.707258, 2, "stadium.png" ],
@@ -70,7 +71,7 @@
             const icon = type.icon;
             const div = document.createElement("div");
 
-            div.innerHTML = icon + title;
+            div.innerHTML = '<img src="' + icon + '"> ' + name;
             legend.appendChild(div);
           }
 
