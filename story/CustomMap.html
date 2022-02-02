@@ -15,7 +15,7 @@
 
         const Arenas = [
           ["Caledon East Arena", 43.874028, -79.860700, 1, "stadium.png" ],
-          ["CAA Centre", 43.669281, -79.707258, 2], "stadium.png" ,
+          ["CAA Centre", 43.669281, -79.707258, 2, "stadium.png" ] ,
           ["Brampton Memorial Arena", 43.680556, -79.759080, 3, "stadium.png" ],
           ["Harry Lumley Bayshore Community Centre", 44.579675, -80.934134, 4, "stadium.png" ],
           ["Centre  Wellington Community Sportsplex", 43.706488, -80.359903, 5, "stadium.png" ],
@@ -55,12 +55,12 @@
             const Arena = Arenas[i];
 
             new google.maps.Marker({
-              position: { lat: Arena[1], lng: Arena[2] },
+              position: { lat: Arena[1], long: Arena[2] },
               map,
-              icon: image,
+              icon: image[4],
               shape: shape,
-              title: Arena[0],
-              zIndex: Arena[3],
+              Title: Arena[0],
+              Number: Arena[3],
             });
           }
         }
