@@ -1,31 +1,28 @@
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 5,
-    center: { lat: 43.822, lng: -80.380 }, 
+    center: { lat: 43.822, lng: -80.380 },
   });
-  
-  const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
- 
-  const markers = locations.map((location, i) => {
-    return new google.maps.Marker({
-      position: location,
-      label: labels[i % labels.length],
-    });
-  });
-  
+
+  setMarkers(map);
 }
-const locations = [
-{ lat: 43.874467, lng: -79.860731 },
-{ lat: 43.679048, lng: -79.758725 },
-{ lat: 43.160504, lng: -79.238876 }, 
-{ lat: 43.651121, lng: -79.899275 }, 
-{ lat: 44.580140, lng: -80.934439 },
-{ lat: 43.887914, lng: -78.890971 },
-{ lat: 44.107026, lng: -79.427128 },
-{ lat: 43.905719, lng: -80.126354 },
-{ lat: 43.477860, lng: -80.547853 },
-{ lat: 42.975154, lng: -81.240603 },
-{ lat: 42.981434, lng: -81.304461 },
-{ lat: 42.968121, lng: -81.209361 },
-{ lat: 43.651152, lng: -79.899339 },
+
+/
+const beaches = [
+  ["Bondi Beach", -33.890542, 151.274856, 4],
+  ["Coogee Beach", -33.923036, 151.259052, 5],
+  ["Cronulla Beach", -34.028249, 151.157507, 3],
+  ["Manly Beach", -33.80010128657071, 151.28747820854187, 2],
+  ["Maroubra Beach", -33.950198, 151.259302, 1],
 ];
+
+function setMarkers(map) {
+
+  const image = {
+    url: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+    size: new google.maps.Size(20, 32),
+    origin: new google.maps.Point(0, 0),
+    anchor: new google.maps.Point(0, 32),
+  };
+ 
+}
