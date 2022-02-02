@@ -14,26 +14,26 @@
         }
 
         const Arenas = [
-          ["Caledon East Arena", 43.874028, -79.860700, 1],
-          ["CAA Centre", 43.669281, -79.707258, 2],
-          ["Brampton Memorial Arena", 43.680556, -79.759080, 3],
-          ["Harry Lumley Bayshore Community Centre", 44.579675, -80.934134, 4],
-          ["Centre  Wellington Community Sportsplex", 43.706488, -80.359903, 5],
-          ["Hespeler Memorial Arena", 43.433273, -80.291736, 6],
-          ["Garden City Arena", 43.161805, -79.238946, 7],
-          ["FirstOntario Centre", 43.259152, -79.872282, 8],
-          ["Centennial Arena", 43.522935, -80.251305, 9],
-          ["Markham Village Arena", 43.876334, -79.257759, 10],
-          ["Elvis Stojko Arena", 43.858389, -79.422211, 11],
-          ["Al Palladini Community Centre", -43.816672, -79.597246, 12],
-          ["East Gwillumbury Sports Complex", 44.107103, -79.427203, 13],
-          ["Startford Rotary Complex", 43.387128, -80.984068, 14],
-          ["Eastview Arena", 44.406060, -79.659042, 15],
-          ["National Training Rinks", 44.353869, -79.668049, 16],
-          ["Joshua's Creek Arenas", 43.494615, -79.675752, 17],
-          ["Glen Abbey Community Centre", 43.436805, -79.737721, 18],
-          ["Aldershot Arena", 43.320129, -79.833456, 19],
-          ["Mayfield Arena", 43.775265, -79.783464, 20]
+          ["Caledon East Arena", 43.874028, -79.860700, 1, "stadium.png" ],
+          ["CAA Centre", 43.669281, -79.707258, 2, "stadium.png" ],
+          ["Brampton Memorial Arena", 43.680556, -79.759080, 3, "stadium.png" ],
+          ["Harry Lumley Bayshore Community Centre", 44.579675, -80.934134, 4, "stadium.png" ],
+          ["Centre  Wellington Community Sportsplex", 43.706488, -80.359903, 5, "stadium.png" ],
+          ["Hespeler Memorial Arena", 43.433273, -80.291736, 6, "stadium.png" ],
+          ["Garden City Arena", 43.161805, -79.238946, 7, "stadium.png" ],
+          ["FirstOntario Centre", 43.259152, -79.872282, 8, "stadium.png" ],
+          ["Centennial Arena", 43.522935, -80.251305, 9, "stadium.png" ],
+          ["Markham Village Arena", 43.876334, -79.257759, 10, "stadium.png" ],
+          ["Elvis Stojko Arena", 43.858389, -79.422211, 11, "stadium.png" ],
+          ["Al Palladini Community Centre", -43.816672, -79.597246, 12, "stadium.png" ],
+          ["East Gwillumbury Sports Complex", 44.107103, -79.427203, 13, "stadium.png" ],
+          ["Startford Rotary Complex", 43.387128, -80.984068, 14, "stadium.png" ],
+          ["Eastview Arena", 44.406060, -79.659042, 15, "stadium.png" ],
+          ["National Training Rinks", 44.353869, -79.668049, 16, "stadium.png" ],
+          ["Joshua's Creek Arenas", 43.494615, -79.675752, 17, "stadium.png" ],
+          ["Glen Abbey Community Centre", 43.436805, -79.737721, 18, "stadium.png" ],
+          ["Aldershot Arena", 43.320129, -79.833456, 19, "stadium.png" ],
+          ["Mayfield Arena", 43.775265, -79.783464, 20, "stadium.png" ]
 
         ];
 
@@ -47,15 +47,15 @@
           };
 
           for (let i = 0; i < Arenas.length; i++) {
-            const Arena = Arenas[i];
+            const Arena = Arenas;
 
             new google.maps.Marker({
-              position: { lat: Arena[1], lng: Arena[2] },
+              position: { lat: Arena[i][1], lng: Arena[i][2] },
               map,
               icon: Arena[i][4],
               shape: shape,
-              title: Arena[0],
-              zIndex: Arena[3],
+              title: Arena[i][0],
+              zIndex: Arena[i][3],
             });
           }
         }
