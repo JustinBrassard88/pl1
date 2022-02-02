@@ -14,7 +14,7 @@
         }
 
 
-        const beaches = [
+        const Arenas = [
           ["Caledon East Arena", -33.890542, 151.274856, 4],
           ["Coogee Beach", -33.923036, 151.259052, 5],
           ["Cronulla Beach", -34.028249, 151.157507, 3],
@@ -36,16 +36,16 @@
             type: "poly",
           };
 
-          for (let i = 0; i < beaches.length; i++) {
-            const beach = beaches[i];
+          for (let i = 0; i < Arenas.length; i++) {
+            const Arena = Arenas[i];
 
             new google.maps.Marker({
-              position: { lat: beach[1], lng: beach[2] },
+              position: { lat: Arena[1], lng: Arena[2] },
               map,
               icon: image,
               shape: shape,
-              title: beach[0],
-              zIndex: beach[3],
+              title: Arena[0],
+              zIndex: Arena[3],
             });
           }
         }
