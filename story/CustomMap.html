@@ -7,19 +7,25 @@
         function initMap() {
           const map = new google.maps.Map(document.getElementById("map"), {
             zoom: 10,
-            center: { lat: -33.9, lng: 151.2 },
+            center: { lat: 43.732, lng: -80.397 },
           });
 
           setMarkers(map);
         }
 
-
         const Arenas = [
-          ["Caledon East Arena", -33.890542, 151.274856, 4],
-          ["Coogee Beach", -33.923036, 151.259052, 5],
-          ["Cronulla Beach", -34.028249, 151.157507, 3],
-          ["Manly Beach", -33.80010128657071, 151.28747820854187, 2],
-          ["Maroubra Beach", -33.950198, 151.259302, 1],
+          ["Caledon East Arena", 43.874028, -79.860700, 1],
+          ["CAA Centre", 43.669281, -79.707258, 2],
+          ["Brampton Memorial Arena", 43.680556, -79.759080, 3],
+          ["Harry Lumley Bayshore Community Centre", 44.579675, -80.934134, 4],
+          ["Centre  Wellington Community Sportsplex", 43.706488, -80.359903, 5],
+          ["Hespeler Memorial Arena", 43.433273, -80.291736, 6],
+          ["Garden City Arena", 43.161805, -79.238946, 7],
+          ["FirstOntario Centre", 43.259152, -79.872282, 8],
+          ["Centennial Arena", 43.522935, -80.251305, 9],
+          ["Markham Village Arena", 43.876334, -79.257759, 10],
+          ["Elvis Stojko Arena", 43.858389, -79.422211, 11],
+          ["Al Palladini Community Centre", -43.816672, -79.597246, 12],
         ];
 
         function setMarkers(map) {
