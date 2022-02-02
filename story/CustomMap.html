@@ -47,23 +47,6 @@
             anchor: new google.maps.Point(0, 32),
           };
 
-          const shape = {
-            coords: [1, 1, 1, 20, 18, 20, 18, 1],
-            type: "poly",
-          };
-
-          for (let i = 0; i < Arenas.length; i++) {
-            const Arena = Arenas[i];
-
-            new google.maps.Marker({
-              position: { lat: Arena[1], lng: Arena[2] },
-              map,
-              icon: image,
-              shape: shape,
-              title: Arena[0],
-              zIndex: Arena[3],
-            });
-          }
         }
     </script>
     <style> 
@@ -91,8 +74,6 @@
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         padding:40px;
         margin: 0%;
-        border: black;
-        
         
       }
 
