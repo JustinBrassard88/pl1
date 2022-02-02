@@ -60,6 +60,21 @@
               zIndex: Arena[i][3],
             });
           }
+
+          //Create legend for labels on the map
+          const legend = document.getElementById("legend");
+
+          for (const key in icon) {
+            const type = icon[key];
+            const name = type.title;
+            const icon = type.icon;
+            const div = document.createElement("div");
+
+            div.innerHTML = icon + name;
+            legend.appendChild(div);
+          }
+
+             map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(legend);
         }
     </script>
     <style> 
