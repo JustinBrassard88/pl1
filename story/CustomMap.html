@@ -6,7 +6,7 @@
     <script>
         function initMap() {
           const map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 10,
+            zoom: 7,
             center: { lat: 43.732, lng: -80.397 },
           });
 
@@ -25,7 +25,7 @@
           ["Centennial Arena", 43.522935, -80.251305, 9],
           ["Markham Village Arena", 43.876334, -79.257759, 10],
           ["Elvis Stojko Arena", 43.858389, -79.422211, 11],
-          ["Al Palladini Community Centre", -43.816672, -79.597246, 12],
+          ["Al Palladini Community Centre", -43.816672, -79.597246, 12]
         ];
 
         function setMarkers(map) {
@@ -63,7 +63,7 @@
     <h1>OMHA Caledon Hawks Hockey</h1>
     <div id="map"></div>
     <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap&v=weekly"
     async>
   </script>
   </body>
